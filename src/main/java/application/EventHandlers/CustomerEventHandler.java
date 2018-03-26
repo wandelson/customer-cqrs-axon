@@ -1,6 +1,5 @@
 package application.EventHandlers;
 
-import application.CommandHandlers.CustomerHandler;
 import application.Entities.Customer;
 import application.Events.CustomerCreatedEvent;
 import application.Repositories.CustomerRepository;
@@ -25,6 +24,11 @@ public class CustomerEventHandler {
     public void on(CustomerCreatedEvent event) {
         repository.save(new Customer(event.getCustomerId(), event.getName()));
     }
+
+
+
+
+
 
 
 }
